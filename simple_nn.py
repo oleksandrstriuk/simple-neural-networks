@@ -1,3 +1,4 @@
+# import tensorflow and keras (tf.keras)
 import tensorflow as tf
 from tensorflow import keras
 
@@ -5,6 +6,7 @@ from tensorflow import keras
 (train_images, train_labels), (test_images, test_labels) = \
 keras.datasets.mnist.load_data()
 
+# setup model
 model = keras.Sequential([
     keras.layers.Flatten(input_shape = (28,28)),
     keras.layers.Dense(128, activation=tf.nn.relu),
